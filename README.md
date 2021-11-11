@@ -1,8 +1,9 @@
 # Final Project
 
 - **Tableau:**
-- ** Website:**
-- ** Presentation:** [Google Slides]()
+- **Website:**
+- **Presentation:** [Google Slides]()
+
 ### Software & Resources
 - Data Cleaning and Analysis: Python Pandas
 - Database: PostgreSQL 11.1, SQLAlchemy
