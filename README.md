@@ -23,11 +23,11 @@
 **Project Deliverables**
 
 ## Project Overview
+### Data Cleaning and Exploratory Analysis
 
-**Machine Learning Model**
-** Explanation of Model Choice** 
-
-Data Preprocessing
+### Machine Learning Model
+**Explanation of Model Choice**
+**Data Preprocessing**
 Database Integration
 
 
