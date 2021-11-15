@@ -34,14 +34,18 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 
 ### Phase 2. Exploratory Data Analysis
 
-### Phase 3. Machine Learning Model
+### Phase 3. Data Visualization 
+
+### Phase 4. Machine Learning Model
 **Explanation of Model Choice:**
 **Data Preprocessing**
 **How the data was split**
 
-### Phase 4. Results of Analysis
+### Phase 5. Results of Analysis
 
-### Flask Web-application
+### Phase 6. Interactive Web-application
+
+## Summary
 
 ## Recommendations for Future Analysis
 
