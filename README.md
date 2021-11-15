@@ -28,13 +28,21 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 
 ## Project Phases
 ![fig1]()
-### Phase 1. Data Cleaning and Exploratory Analysis
+### Phase 1. Data Review and Cleaning 
 
 **Integration of Database:** Once the data was cleaned, it was connected and stored in a local PostgresSQL server using SQLAlchemy. The cleaned data was accessed using a Postgres query through Jupyter Notebook to connect to the Machine Learning Model. 
 
-### Phase 2. Machine Learning Model
-**Explanation of Model Choice**
+### Phase 2. Exploratory Data Analysis
+
+### Phase 3. Machine Learning Model
+**Explanation of Model Choice:**
 **Data Preprocessing**
-Database Integration
+**How the data was split**
+
+### Phase 4. Results of Analysis
+
+### Flask Web-application
+
+## Recommendations for Future Analysis
 
 
