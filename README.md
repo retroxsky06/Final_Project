@@ -1,7 +1,7 @@
 # Final Project
 
 ## Project Overview
-For the final project of this course, the primary goal is to tell a cohesive story using a dataset. 
+For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, analyzed, stored in a database, and then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on one's demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask and HTML.
 
 ### Visualizations
 - **Tableau:**
