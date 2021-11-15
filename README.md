@@ -24,6 +24,7 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 - **Questions I hope to answer with the data:**
   - What are the significant risk factors for a stroke?
   - Can machine learning predict whether a patient is likely to suffer a stroke based on one's demographics (age, gender, marital status, type of work and residence) and health records (presence of hypertension and/or heart disease, average glucose level measured after a meal, Body Mass Index (BMI), smoking status, and experience of stroke)?
+- **Algorithm:** Logistic Regression Model
 
 **Project Deliverables**
 
