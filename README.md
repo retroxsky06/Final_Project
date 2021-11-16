@@ -1,5 +1,5 @@
 # Final Project
-
+![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/Kerfin7-NEA-2134.jpg)
 ## Project Overview
 For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, analyzed, stored in a database, and then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on one's demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask and HTML. Findings are displayed through Tableau and Google Slides.
 
