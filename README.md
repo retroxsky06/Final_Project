@@ -28,8 +28,11 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 
 ## Project Phases
 ![fig1]()
-### Phase 1. Data Review and Cleaning 
+### Phase 1. Data Review and Cleaning
+The first part of our Analysis involved looking at the raw data to ensure it was usable for our analysis. The dataset was relatively clean; however, two columns, body mass index (BMI) and smoking status had missing values. 1,458 records had shown NaN (null values) in the column, and initially, I thought about removing the records as it represented a small portion of the dataset.  With further investigation, it contained 140 records of patients who suffered a stroke.  As the dataset had 738 patients who suffered from a stroke compared to 42,00 that did not, the information was valuable to retain.  The NaN values in the BMI column were instead replaced with the mean of BMI.  Additionally, 13,292 records of the dataset had missing values under the smoking status column, accounting for 30.6% of the data.  As the records are a significant portion of the dataset, a new category “unknown” was created to account for the missing values. Python’s Pandas and Numpy were used to clean the dataset. 
 
+After conducting an initial exploratory data analysis, additional cleaning of the data occurred in which four columns- residence type, work type,  average glucose level, and bmi were removed to be used for the machine learning algorithm.  
+ 
 **Integration of Database:** Once the data was cleaned, it was connected and stored in a local PostgresSQL server using SQLAlchemy. The cleaned data was accessed using a Postgres query through Jupyter Notebook to connect to the Machine Learning Model. 
 
 ### Phase 2. Exploratory Data Analysis
