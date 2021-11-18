@@ -35,18 +35,21 @@ After conducting an initial exploratory data analysis, additional cleaning of th
 **Integration of Database:** Once the data was cleaned, it was connected and stored in a local PostgresSQL server using SQLAlchemy. The cleaned data was accessed using a Postgres query through Jupyter Notebook to connect to the Machine Learning Model. 
 
 ### Phase 2. Exploratory Data Analysis
+Once the preliminary data cleaning was complete, initial investigations to discover any patterns and correlation among features (all variables except stroke) and target variable (stroke).  Insights are highlighted below:
+- There is a significant difference between patients that suffered from a stroke (783 or 1.8%), compared to those that did not (42,617 or 98.2%). The dataset is extremely unbalanced, which will need to be amended prior to the machine learning phase.
+- Age: The risk of experiencing a stroke increases as a patient's age advances.
+- Gender: 
+- Marriage status: Married people have a higher chance of suffering a stroke compared to those who are not married.
+- Smoking status: Formerly smoked people have a higher chance of suffering a stroke followed by those who smoke, then people who never smoke.
+- Hypertension: People who have hypertension have a higher chance of suffering a stroke.
+- Heart disease: People who have heart disease are more prone to suffering a stroke.
 
-### Phase 3. Data Visualization 
-
-### Phase 4. Machine Learning Model
+### Phase 3. Machine Learning Model
 **Explanation of Model Choice:**
 **Data Preprocessing**
 **How the data was split**
 
-### Phase 5. Results of Analysis
-
-### Phase 6. Interactive Web-application
-
+### Phase 4. Results of Analysis
 ## Summary
 
 ## Recommendations for Future Analysis
