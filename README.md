@@ -43,6 +43,7 @@ Once the preliminary data cleaning was complete, initial investigations to disco
 - Smoking status: Formerly smoked people have a higher chance of suffering a stroke followed by those who smoke, then people who never smoke.
 - Hypertension: People who have hypertension have a higher chance of suffering a stroke.
 - Heart disease: People who have heart disease are more prone to suffering a stroke.
+
 Although all dataset variables may have an impact on someone’s chances of suffering a stroke, based on the analysis, the significant stroke risk factors are age, hypertension, heart disease, smoking status, and average glucose level.
 
 
