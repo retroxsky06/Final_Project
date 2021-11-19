@@ -1,18 +1,17 @@
 # Final Project
-
+![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/Kerfin7-NEA-2134.jpg)
 ## Project Overview
-For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, analyzed, stored in a database, and then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on one's demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask and HTML. Findings are displayed through Tableau and Google Slides.
+For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, and analyzed using Python’s Pandas and Numpy, and then stored in a PostgreSQL database.  The data is then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on their demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask, HTML, and CSS. Findings are displayed through Tableau and Google Slides.
 
 ### Visualizations
 - **Tableau:**
-- **Website:**
 - **Presentation:** [Google Slides]()
 
 ### Software & Resources
-- Data Cleaning and Analysis: Python Pandas
+- Data Cleaning and Analysis: Python
 - Database: PostgreSQL 11.1, SQLAlchemy
 - Machine Learning: Scikit-learn
-- Vizualizations: Tableau, JavaScript, HTML, Flask
+- Vizualizations: Tableau, Flask, HTML, CSS
 - Presentation: Google Slides
 - Data source: [train_strokes.csv]() from [Kaggle](www.kaggle.com)
 
@@ -36,18 +35,24 @@ After conducting an initial exploratory data analysis, additional cleaning of th
 **Integration of Database:** Once the data was cleaned, it was connected and stored in a local PostgresSQL server using SQLAlchemy. The cleaned data was accessed using a Postgres query through Jupyter Notebook to connect to the Machine Learning Model. 
 
 ### Phase 2. Exploratory Data Analysis
+Once the preliminary data cleaning was complete, initial investigations to discover any patterns and correlation among features (all variables except stroke) and target variable (stroke).  Insights are highlighted below:
+- There is a significant difference between patients that suffered from a stroke (783 or 1.8%), compared to those that did not (42,617 or 98.2%). The dataset is extremely unbalanced, which will need to be amended prior to the machine learning phase.
+- Age: The risk of experiencing a stroke increases as a patient's age advances.
+- Gender: 
+- Marriage status: Married people have a higher chance of suffering a stroke compared to those who are not married.
+- Smoking status: Formerly smoked people have a higher chance of suffering a stroke followed by those who smoke, then people who never smoke.
+- Hypertension: People who have hypertension have a higher chance of suffering a stroke.
+- Heart disease: People who have heart disease are more prone to suffering a stroke.
 
-### Phase 3. Data Visualization 
+Although all dataset variables may have an impact on someone’s chances of suffering a stroke, based on the analysis, the significant stroke risk factors are age, hypertension, heart disease, smoking status, and average glucose level.
 
-### Phase 4. Machine Learning Model
+
+### Phase 3. Machine Learning Model
 **Explanation of Model Choice:**
 **Data Preprocessing**
 **How the data was split**
 
-### Phase 5. Results of Analysis
-
-### Phase 6. Interactive Web-application
-
+### Phase 4. Results of Analysis
 ## Summary
 
 ## Recommendations for Future Analysis
