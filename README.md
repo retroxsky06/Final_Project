@@ -1,5 +1,8 @@
-# Final Project
+# Stroke Risk Analytics
 ![fig1](https://github.com/retroxsky06/Final_Project/blob/main/images/Kerfin7-NEA-2134.jpg)
+
+UC Berkeley Extension Data Analytics Bootcamp Final Project
+*** 
 ## Project Overview
 For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, and analyzed using Python’s Pandas and Numpy, and then stored in a PostgreSQL database.  The data is then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on their demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask, HTML, and CSS. Findings are displayed through Tableau and Google Slides.
 
@@ -36,7 +39,7 @@ After conducting an initial exploratory data analysis, additional cleaning of th
 
 ### Phase 2. Exploratory Data Analysis
 Once the preliminary data cleaning was complete, initial investigations to discover any patterns and correlation among features (all variables except stroke) and target variable (stroke).  Insights are highlighted below:
-- There is a significant difference between patients that suffered from a stroke (783 or 1.8%), compared to those that did not (42,617 or 98.2%). The dataset is extremely unbalanced, which will need to be amended prior to the machine learning phase.
+- There is a significant difference between patients that suffered from a stroke (783 or 1.8%), compared to those that did not (42,617 or 98.2%). The dataset is extremely unbalanced, which will need to be amended prior inputting the data into a machine learning algorithm.
 - Age: The risk of experiencing a stroke increases as a patient's age advances.
 - Gender: 
 - Marriage status: Married people have a higher chance of suffering a stroke compared to those who are not married.
@@ -46,19 +49,29 @@ Once the preliminary data cleaning was complete, initial investigations to disco
 
 Although all dataset variables may have an impact on someone’s chances of suffering a stroke, based on the analysis, the significant stroke risk factors are age, hypertension, heart disease, smoking status, and average glucose level.
 
-
 ### Phase 3. Machine Learning Model
-**Data Processing, Scaling, & Normalizing:**
+**Data Processing, Scaling & Normalizing, & Oversampling:**
+- Majority of the preliminary data preprocessing occurred earlier in the analysis and to further prepare the data for a machine learning algorithm, categorical datatypes were transformed into numerical data using **one hot encoding** process (LabelEncoder).
+- Once data has been encoded, it is then scaled and normalized. Since the ‘age’ column holds larger numbers, it is best to scale and normalize so they would not disproportionately impact the model. Scikit-learn's StandardScaler is applied to scale the data, and all numerical columns are transformed to have a mean of 0 and a standard deviation of 1, reducing the likelihood that large values will not influence the model. 
+- Another technique applied to the dataset was **Random Oversampling** to resolve the class imbalance.  Scikit-learn’s RandomOverSampler is applied so the minority class is randomly selected and added to the training set until the majority and minority classes are balanced. This process occurs after training/splitting the data.
+  - In the code below. the training data (X_train and y_train) is resampled using the fit_resample() method.
+  - The results are named ‘X_resampled’ and ‘y_resampled.’
 
-**Preliminary Engineering, Feature Selection, & Decision-making process:*
+```
+# Resample the training data with the RandomOversampler
+from imblearn.over_sampling import RandomOverSampler
+ros = RandomOverSampler(random_state=42)
+X_resampled, y_resampled = ros.fit_resample(X_train, y_train)
+```
+**Feature Selection & Training & Testing sets:**
 
-**Splitting Data Into Testing & Training sets:**
+The dataset was separated into two categories: 6 features (input) and 1 target (output):
+- Features: age, gender, hypertension, heart disease, smoking status
+- Target: stroke
 
+For the final Linear Regression Model, a 75/25 testing/training split was used to achieve the results. 
 
-**Explanation of Model Choice:**
-
-**Model Choice:** Linear Regression Model (random_state=42)
-
+**Explanation of Model Choice:**  Several models were tried The Linear Regression Model (random_state=42) was chosen
 ![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/ml_trials.png)
 
 
