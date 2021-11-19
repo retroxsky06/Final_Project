@@ -1,4 +1,4 @@
-# Stroke Risk Analytics Final Project
+# Stroke Risk Analytics
 ![fig1](https://github.com/retroxsky06/Final_Project/blob/main/images/Kerfin7-NEA-2134.jpg)
 
 UC Berkeley Extension Data Analytics Bootcamp Final Project
@@ -49,13 +49,30 @@ Once the preliminary data cleaning was complete, initial investigations to disco
 
 Although all dataset variables may have an impact on someone’s chances of suffering a stroke, based on the analysis, the significant stroke risk factors are age, hypertension, heart disease, smoking status, and average glucose level.
 
-
 ### Phase 3. Machine Learning Model
-**Data Processing, Scaling, & Normalizing:**
+**Data Processing, Scaling & Normalizing, & Oversampling:**
+- Majority of the preliminary data preprocessing occurred earlier in the analysis and to further prepare the data for a machine learning algorithm, categorical datatypes were transformed into numerical data using **one hot encoding** process (LabelEncoder).
+- Once data has been encoded, it is then scaled and normalized. Since the ‘age’ column holds larger numbers, it is best to scale and normalize so they would not disproportionately impact the model. Scikit-learn's StandardScaler is applied to scale the data, and all numerical columns are transformed to have a mean of 0 and a standard deviation of 1, reducing the likelihood that large values will not influence the model. 
+- Another technique applied to the dataset was **Random Oversampling** to resolve the class imbalance.  Scikit-learn’s RandomOverSampler is applied so the minority class is randomly selected and added to the training set until the majority and minority classes are balanced. This process occurs after training/splitting the data.
+  - In the code below. the training data (X_train and y_train) is resampled using the fit_resample() method.
+  - The results are named ‘X_resampled’ and ‘y_resampled.’
 
-**Preliminary Engineering, Feature Selection, & Decision-making process:*
+```
+# Resample the training data with the RandomOversampler
+from imblearn.over_sampling import RandomOverSampler
+ros = RandomOverSampler(random_state=42)
+X_resampled, y_resampled = ros.fit_resample(X_train, y_train)
+```
 
-**Splitting Data Into Testing & Training sets:**
+**Feature Selection,Training & Testing, & Decision-making process:**
+The dataset was separated into two categories: 6 features (input) and 1 target (output):
+- Features: age, gender, hypertension, heart disease, smoking status
+- Target: stroke
+
+The 
+- 
+**Data Testing & Training sets & Random Oversampling:**
+
 
 
 **Explanation of Model Choice:**
