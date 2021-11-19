@@ -1,5 +1,5 @@
 # Final Project
-![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/Kerfin7-NEA-2134.jpg)
+![fig1](https://github.com/retroxsky06/Final_Project/blob/main/images/Kerfin7-NEA-2134.jpg)
 ## Project Overview
 For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, and analyzed using Python’s Pandas and Numpy, and then stored in a PostgreSQL database.  The data is then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on their demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask, HTML, and CSS. Findings are displayed through Tableau and Google Slides.
 
@@ -26,7 +26,7 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 - **Algorithm:** Logistic Regression Model
 
 ## Project Phases
-![fig1]()
+![fig1](2)
 ### Phase 1. Data Review and Cleaning
 The first part of our Analysis involved looking at the raw data to ensure it was usable for our analysis. The dataset was relatively clean; however, two columns, body mass index (BMI) and smoking status had missing values. 1,458 records had shown NaN (null values) in the column, and initially, I thought about removing the records as it represented a small portion of the dataset.  With further investigation, it contained 140 records of patients who suffered a stroke.  As the dataset had 738 patients who suffered from a stroke compared to 42,00 that did not, the information was valuable to retain.  The NaN values in the BMI column were instead replaced with the mean of BMI.  Additionally, 13,292 records of the dataset had missing values under the smoking status column, accounting for 30.6% of the data.  As the records are a significant portion of the dataset, a new category “unknown” was created to account for the missing values. Python’s Pandas and Numpy were used to clean the dataset. 
 
@@ -48,8 +48,20 @@ Although all dataset variables may have an impact on someone’s chances of suff
 
 
 ### Phase 3. Machine Learning Model
+**Data Processing, Scaling, & Normalizing:**
+
+**Preliminary Engineering, Feature Selection, & Decision-making process:*
+
+**Splitting Data Into Testing & Training sets:**
+
+
 **Explanation of Model Choice:**
-**Data Preprocessing**
+
+**Model Choice:** Linear Regression Model (random_state=42)
+
+![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/ml_trials.png)
+
+
 **How the data was split**
 
 ### Phase 4. Results of Analysis
