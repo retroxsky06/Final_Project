@@ -49,9 +49,12 @@ Once the preliminary data cleaning was complete, initial investigations to disco
 
 Although all dataset variables may have an impact on someone’s chances of suffering a stroke, based on the analysis, the significant stroke risk factors are age, hypertension, heart disease, smoking status, and average glucose level.
 
+Fig. 2. Bivariate Analysis: Hypertension, Heart Disease, & Marriage status
+![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/bivar_analysis.png)
+
 ### Phase 3. Machine Learning Model
 **Data Processing, Scaling & Normalizing, & Oversampling:**
-- Majority of the preliminary data preprocessing occurred earlier in the analysis and to further prepare the data for a machine learning algorithm, categorical datatypes were transformed into numerical data using **one hot encoding** process (LabelEncoder).
+- To further prepare the data for a machine learning algorithm, categorical datatypes were transformed into numerical data using **one hot encoding** process (LabelEncoder).
 - Once data has been encoded, it is then scaled and normalized. Since the ‘age’ column holds larger numbers, it is best to scale and normalize so they would not disproportionately impact the model. Scikit-learn's StandardScaler is applied to scale the data, and all numerical columns are transformed to have a mean of 0 and a standard deviation of 1, reducing the likelihood that large values will not influence the model. 
 - Another technique applied to the dataset was **Random Oversampling** to resolve the class imbalance.  Scikit-learn’s RandomOverSampler is applied so the minority class is randomly selected and added to the training set until the majority and minority classes are balanced. This process occurs after training/splitting the data.
   - In the code below. the training data (X_train and y_train) is resampled using the fit_resample() method.
