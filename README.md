@@ -7,7 +7,7 @@ UC Berkeley Extension Data Analytics Bootcamp Final Project
 For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, and analyzed using Python’s Pandas and Numpy, and then stored in a PostgreSQL database.  The data is then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on their demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask, HTML, and CSS. Findings are displayed through Tableau and Google Slides.
 
 ### Visualizations
-- **Tableau:** [Stroke Analytics]()
+- **Tableau:** [Stroke Analytics](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/Story1?publish=yes)
 - **Presentation:** [Google Slides]()
 
 ### Software & Resources
@@ -47,7 +47,7 @@ Once the preliminary data cleaning was complete, initial investigations to disco
 - Hypertension: People who have hypertension have a higher chance of suffering a stroke.
 - Heart disease: People who have heart disease are more prone to suffering a stroke.
 
-Although all dataset variables may have an impact on someone’s chances of suffering a stroke, based on the analysis, the significant stroke risk factors are age, hypertension, heart disease, smoking status, and average glucose level. The findings of this data exploration can be found [here]() and was adapted into a Tableau story.
+Although all dataset variables may have an impact on someone’s chances of suffering a stroke, based on the analysis, the significant stroke risk factors are age, hypertension, heart disease, smoking status, and average glucose level. The findings of this data exploration can be found [here](https://github.com/retroxsky06/Final_Project/blob/main/data_cleaning_and_analysis/exploratory_data_analysis.ipynb) and was adapted into a Tableau story.
 
 ##### Fig. 2. Bivariate Analysis: Hypertension, Heart Disease, & Marriage status
 ![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/bivar_analysis.png)
