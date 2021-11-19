@@ -39,7 +39,7 @@ After conducting an initial exploratory data analysis, additional cleaning of th
 
 ### Phase 2. Exploratory Data Analysis
 Once the preliminary data cleaning was complete, initial investigations to discover any patterns and correlation among features (all variables except stroke) and target variable (stroke).  Insights are highlighted below:
-- There is a significant difference between patients that suffered from a stroke (783 or 1.8%), compared to those that did not (42,617 or 98.2%). The dataset is extremely unbalanced, which will need to be amended prior to the machine learning phase.
+- There is a significant difference between patients that suffered from a stroke (783 or 1.8%), compared to those that did not (42,617 or 98.2%). The dataset is extremely unbalanced, which will need to be amended prior inputting the data into a machine learning algorithm.
 - Age: The risk of experiencing a stroke increases as a patient's age advances.
 - Gender: 
 - Marriage status: Married people have a higher chance of suffering a stroke compared to those who are not married.
@@ -63,22 +63,15 @@ from imblearn.over_sampling import RandomOverSampler
 ros = RandomOverSampler(random_state=42)
 X_resampled, y_resampled = ros.fit_resample(X_train, y_train)
 ```
+**Feature Selection & Training & Testing sets:**
 
-**Feature Selection,Training & Testing, & Decision-making process:**
 The dataset was separated into two categories: 6 features (input) and 1 target (output):
 - Features: age, gender, hypertension, heart disease, smoking status
 - Target: stroke
 
-The 
-- 
-**Data Testing & Training sets & Random Oversampling:**
+For the final Linear Regression Model, a 75/25 testing/training split was used to achieve the results. 
 
-
-
-**Explanation of Model Choice:**
-
-**Model Choice:** Linear Regression Model (random_state=42)
-
+**Explanation of Model Choice:**  Several models were tried The Linear Regression Model (random_state=42) was chosen
 ![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/ml_trials.png)
 
 
