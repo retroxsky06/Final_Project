@@ -7,7 +7,7 @@ UC Berkeley Extension Data Analytics Bootcamp Final Project
 For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, and analyzed using Python’s Pandas and Numpy, and then stored in a PostgreSQL database.  The data is then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on their demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask, HTML, and CSS. Findings are displayed through Tableau and Google Slides.
 
 ### Visualizations
-- **Tableau:**
+- **Tableau:** [Stroke Analytics](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/Story1?publish=yes)
 - **Presentation:** [Google Slides]()
 
 ### Software & Resources
@@ -47,22 +47,17 @@ Once the preliminary data cleaning was complete, initial investigations to disco
 - Hypertension: People who have hypertension have a higher chance of suffering a stroke.
 - Heart disease: People who have heart disease are more prone to suffering a stroke.
 
-Although all dataset variables may have an impact on someone’s chances of suffering a stroke, based on the analysis, the significant stroke risk factors are age, hypertension, heart disease, smoking status, and average glucose level.
+Although all dataset variables may have an impact on someone’s chances of suffering a stroke, based on the analysis, the significant stroke risk factors are age, hypertension, heart disease, smoking status, and average glucose level. The findings of this data exploration can be found [here](https://github.com/retroxsky06/Final_Project/blob/main/data_cleaning_and_analysis/exploratory_data_analysis.ipynb) and was adapted into a Tableau story.
+
+##### Fig. 2. Bivariate Analysis: Hypertension, Heart Disease, & Marriage status
+![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/bivar_analysis.png)
 
 ### Phase 3. Machine Learning Model
 **Data Processing, Scaling & Normalizing, & Oversampling:**
-- Majority of the preliminary data preprocessing occurred earlier in the analysis and to further prepare the data for a machine learning algorithm, categorical datatypes were transformed into numerical data using **one hot encoding** process (LabelEncoder).
+- To further prepare the data for a machine learning algorithm, categorical datatypes were transformed into numerical data using **one hot encoding** process (LabelEncoder).
 - Once data has been encoded, it is then scaled and normalized. Since the ‘age’ column holds larger numbers, it is best to scale and normalize so they would not disproportionately impact the model. Scikit-learn's StandardScaler is applied to scale the data, and all numerical columns are transformed to have a mean of 0 and a standard deviation of 1, reducing the likelihood that large values will not influence the model. 
 - Another technique applied to the dataset was **Random Oversampling** to resolve the class imbalance.  Scikit-learn’s RandomOverSampler is applied so the minority class is randomly selected and added to the training set until the majority and minority classes are balanced. This process occurs after training/splitting the data.
-  - In the code below. the training data (X_train and y_train) is resampled using the fit_resample() method.
-  - The results are named ‘X_resampled’ and ‘y_resampled.’
 
-```
-# Resample the training data with the RandomOversampler
-from imblearn.over_sampling import RandomOverSampler
-ros = RandomOverSampler(random_state=42)
-X_resampled, y_resampled = ros.fit_resample(X_train, y_train)
-```
 **Feature Selection & Training & Testing sets:**
 
 The dataset was separated into two categories: 6 features (input) and 1 target (output):
@@ -71,15 +66,14 @@ The dataset was separated into two categories: 6 features (input) and 1 target (
 
 For the final Linear Regression Model, a 75/25 testing/training split was used to achieve the results. 
 
-**Explanation of Model Choice:**  Several models were tried The Linear Regression Model (random_state=42) was chosen
+**Explanation of Model Choice:**  Several models were tried, and it was the Linear Regression (random_state=42) that outperformed the other models. The results for each model is displayed below:
+
 ![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/ml_trials.png)
 
-
-**How the data was split**
-
 ### Phase 4. Results of Analysis
+
 ## Summary
 
-## Recommendations for Future Analysis
+### Recommendations for Future Analysis
 
 
