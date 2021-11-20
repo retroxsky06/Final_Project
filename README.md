@@ -70,7 +70,14 @@ For the final Linear Regression Model, a 75/25 testing/training split was used t
 
 ![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/ml_trials.png)
 
-### Phase 4. Results of Analysis
+#### Results of Analysis
+The model ran successfully with a 76% accuracy; however, the percentage can be misleading due to a high class imbalance.  The precision, recall, and f1 scores are reviewed to better evaluate the model. Results of the model is displayed below in a confusion matrix, where 0 equals 'No Stroke,' and 1 equals 'Stroke.'
+![fig5](https://github.com/retroxsky06/Final_Project/blob/main/images/model_run.png)
+
+#### - Out of 10,642 no stroke outcomes (Actual 0), 7,788 were predicted to be no stroke (Predicted 0), which are true positives. 
+#### - Out of 10,642 no stroke outcomes (Actual 0), 2,854 were predicted to have stroke (Predicted 1), which are considered false negatives.
+#### - Out of 208 stroke outcomes (Actual 1), 44 were predicted to be no stroke (Predicted 0) and are considered false positives.
+#### - Out of 208  stroke outcomes (Actual 1), 164 were predicted to be strokes (Predicted 1) and are considered true negatives.
 
 ## Summary
 
