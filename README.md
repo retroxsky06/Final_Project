@@ -6,7 +6,7 @@
 ## Project Overview
 For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, and analyzed using Python’s Pandas and Numpy, and then stored in a PostgreSQL database.  The data is then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on their demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask, HTML, and CSS. Findings are displayed through Tableau and Google Slides.
 
-### Visualizations
+### Visualizations & Presentation
 - [Tableau](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/Story1?publish=yes) 
 - [Google Slides Presentation](https://docs.google.com/presentation/d/1LFhhYaabJc8rippfvuhxt_4OcxhvujPh_i00uDQa6iU/edit?usp=sharing)
 
@@ -14,7 +14,7 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 - Data Cleaning and Analysis: Python
 - Database: PostgreSQL 11.1, SQLAlchemy
 - Machine Learning: Scikit-learn
-- Vizualizations: Tableau, Flask, HTML, CSS
+- Visualizations: Tableau, Flask, HTML, CSS
 - Presentation: Google Slides
 - Data source: [train_strokes.csv](https://github.com/retroxsky06/Final_Project/blob/main/Resources/train_strokes.csv) from [Kaggle](kaggle.com/datasets)
 
@@ -24,8 +24,12 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 - **Source of data:** The dataset was sourced from Kaggle. This dataset contains 43,400 observations with 11 attributes. Each row in the data provides relevant patient information. The initial source of the data is unknown.
   - train_strokes.csv: contains data specific to patients (age, gender, heart disease, hypertension, etc.)
 - **Questions I hope to answer with the data:**
-  - What are the significant risk factors for a stroke?
-  - Can machine learning predict whether a patient is likely to suffer a stroke based on one's demographics (age, gender, marital status) and health records (presence of hypertension and/or heart disease, smoking status, and experience of stroke)?
+  - Are only older adults impacted by strokes?
+  - Do males have a higher chance of suffering from a stroke than females?
+  - People who have hypertension have a higher chance of suffering from a stroke?
+  - People who have heart disease are more prone to stroke?
+  - Do married people have a higher chance of getting a stroke than unmarried people?
+  - Are people who smoke are more prone to stroke?
 - **Algorithm:** Logistic Regression Model
 
 ## Project Phases
