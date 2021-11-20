@@ -3,6 +3,11 @@ html, body {
  
 }
 
+.parentDiv {  
+    display: flex; 
+    justify-content: center; 
+    align-items: center;}
+
 h1 {
     font-family: 'Helvetica', sans-serif;
     font-size: 1.5rem;
@@ -33,11 +38,11 @@ h4 {
     font-size: 1.0rem;
     font-weight: bold;
     letter-spacing: 1px;
-    text-align: right;
     color: #081720;
     border-color: blue;  
     border-width: .25em;  
-    border-style: double;  
+    border-style: double;
+    padding:20px;  
 }
 
 p {
