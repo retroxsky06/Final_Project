@@ -72,15 +72,22 @@ For the final Linear Regression Model, a 75/25 testing/training split was used t
 
 #### Results of Analysis
 The model ran successfully with a 76% accuracy; however, the percentage can be misleading due to a high class imbalance.  The precision, recall, and f1 scores are reviewed to better evaluate the model. Results of the model is displayed below in a confusion matrix, where 0 equals 'No Stroke,' and 1 equals 'Stroke.'
+
 ![fig5](https://github.com/retroxsky06/Final_Project/blob/main/images/model_run.png)
 
-#### - Out of 10,642 no stroke outcomes (Actual 0), 7,788 were predicted to be no stroke (Predicted 0), which are true positives. 
-#### - Out of 10,642 no stroke outcomes (Actual 0), 2,854 were predicted to have stroke (Predicted 1), which are considered false negatives.
-#### - Out of 208 stroke outcomes (Actual 1), 44 were predicted to be no stroke (Predicted 0) and are considered false positives.
-#### - Out of 208  stroke outcomes (Actual 1), 164 were predicted to be strokes (Predicted 1) and are considered true negatives.
+- Out of 10,642 no stroke outcomes (Actual 0), 7,788 were predicted to be no stroke (Predicted 0), which are true positives. 
+- Out of 10,642 no stroke outcomes (Actual 0), 2,854 were predicted to have stroke (Predicted 1), which are considered false negatives.
+- Out of 208 stroke outcomes (Actual 1), 44 were predicted to be no stroke (Predicted 0) and are considered false positives.
+- Out of 208  stroke outcomes (Actual 1), 164 were predicted to be strokes (Predicted 1) and are considered true negatives.
 
-## Summary
+## Recommendations for Future Analysis
+- Run different train and test sets: A 75/25 train/test was only attempted in this analysis and in the future it would be helpful to try other size parameters, such as a 67% train and a 33% test, and a 50% train and 50% test set.
+- Add all the variables: Instead of only using seven variables (including target), all variables could be applied to see if the accuracy results, and precision, recall, and f1 scores improve. 
+- Revisit the tried models to fine tune them to get a better fitting model.
+- Explore different machine models
 
-### Recommendations for Future Analysis
+### Improvements
+An area that could have improved my project is taking more time to do statistical analysis to attain a better understanding of the risk factors and its signifiance.. Additionally, as there are many factors that may impact one’s risk of suffering a stroke, I could have used all the variables for the machine learning algorithm.
+
 
 
