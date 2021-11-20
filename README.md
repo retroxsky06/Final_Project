@@ -7,8 +7,8 @@
 For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, and analyzed using Python’s Pandas and Numpy, and then stored in a PostgreSQL database.  The data is then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on their demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask, HTML, and CSS. Findings are displayed through Tableau and Google Slides.
 
 ### Visualizations
-- **Tableau:** [Stroke Analytics](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/Story1?publish=yes)
-- **Presentation:** [Google Slides](https://docs.google.com/presentation/d/1LFhhYaabJc8rippfvuhxt_4OcxhvujPh_i00uDQa6iU/edit?usp=sharing)
+- [Tableau](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/Story1?publish=yes) 
+- [Google Slides Presentation](https://docs.google.com/presentation/d/1LFhhYaabJc8rippfvuhxt_4OcxhvujPh_i00uDQa6iU/edit?usp=sharing)
 
 ### Software & Resources
 - Data Cleaning and Analysis: Python
@@ -16,7 +16,7 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 - Machine Learning: Scikit-learn
 - Vizualizations: Tableau, Flask, HTML, CSS
 - Presentation: Google Slides
-- Data source: [train_strokes.csv]() from [Kaggle](www.kaggle.com/datasets)
+- Data source: [train_strokes.csv](https://github.com/retroxsky06/Final_Project/blob/main/Resources/train_strokes.csv) from [Kaggle](kaggle.com/datasets)
 
 ## Outline of Project
 - **Selected Topic:** Stroke
