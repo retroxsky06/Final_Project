@@ -1,7 +1,7 @@
 # Stroke Risk Analytics
 ![fig1](https://github.com/retroxsky06/Final_Project/blob/main/images/Kerfin7-NEA-2134.jpg)
 
-UC Berkeley Extension Data Analytics Bootcamp Final Project
+##### UC Berkeley Extension Data Analytics Bootcamp Final Project
 *** 
 ## Project Overview
 For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, and analyzed using Python’s Pandas and Numpy, and then stored in a PostgreSQL database.  The data is then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on their demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask, HTML, and CSS. Findings are displayed through Tableau and Google Slides.
@@ -16,11 +16,11 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 - Machine Learning: Scikit-learn
 - Vizualizations: Tableau, Flask, HTML, CSS
 - Presentation: Google Slides
-- Data source: [train_strokes.csv]() from [Kaggle](www.kaggle.com)
+- Data source: [train_strokes.csv]() from [Kaggle](www.kaggle.com/datasets)
 
 ## Outline of Project
 - **Selected Topic:** Stroke
-- **Reason for Selected topic:** The topic was selected due to interest in examining potential risk factors that may cause strokes, the second leading cause of death worldwide, and a major cause of severe disability.
+- **Reason for Selected topic:** The topic was selected due to interest in examining six assumptions about risk factors that lead to a stroke, the second leading cause of death worldwide, and a major cause of severe disability.
 - **Source of data:** The dataset was sourced from Kaggle. This dataset contains 43,400 observations with 11 attributes. Each row in the data provides relevant patient information. The initial source of the data is unknown.
   - train_strokes.csv: contains data specific to patients (age, gender, heart disease, hypertension, etc.)
 - **Questions I hope to answer with the data:**
@@ -31,23 +31,23 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 ## Project Phases
 ![fig1](2)
 ### Phase 1. Data Review and Cleaning
-The first part of our Analysis involved looking at the raw data to ensure it was usable for our analysis. The dataset was relatively clean; however, two columns, body mass index (BMI) and smoking status had missing values. 1,458 records had shown NaN (null values) in the column, and initially, I thought about removing the records as it represented a small portion of the dataset.  With further investigation, it contained 140 records of patients who suffered a stroke.  As the dataset had 738 patients who suffered from a stroke compared to 42,00 that did not, the information was valuable to retain.  The NaN values in the BMI column were instead replaced with the mean of BMI.  Additionally, 13,292 records of the dataset had missing values under the smoking status column, accounting for 30.6% of the data.  As the records are a significant portion of the dataset, a new category “unknown” was created to account for the missing values. Python’s Pandas and Numpy were used to clean the dataset. 
+The first part of our Analysis involved looking at the raw data to ensure it was usable for our analysis. The dataset was relatively clean; however, two columns, body mass index (BMI) and smoking status had missing values. 1,458 records had shown NaN (null values) in the column, and initially, I thought about removing the records as it represented a small portion of the dataset.  With further investigation, it contained 140 records of patients who suffered a stroke.  As the dataset had 738 patients who suffered from a stroke compared to 42,00 that did not, the information was valuable to retain.  The NaN values in the BMI column were instead replaced with the mean of BMI.  Additionally, 13,292 records of the dataset had missing values under the smoking status column, accounting for 30.6% of the data.  As the records are a significant portion of the dataset, a new category “unknown” was created to account for the missing values. Python’s pandas and numpy were used to clean the dataset. 
 
-After conducting an initial exploratory data analysis, additional cleaning of the data occurred in which four columns- residence type, work type,  average glucose level, and bmi were removed to be used for the machine learning algorithm.  
+After conducting an initial exploratory data analysis, additional cleaning of the data occurred in which four columns- residence type, work type, average glucose level, and BMI were removed.  
  
-**Integration of Database:** Once the data was cleaned, it was connected and stored in a local PostgresSQL server using SQLAlchemy. The cleaned data was accessed using a Postgres query through Jupyter Notebook to connect to the Machine Learning Model. 
+**Integration of Database:** Once the data was cleaned, it was connected and stored in a local PostgreSQL server using SQLAlchemy. The cleaned data was accessed using a Postgres query through Jupyter Notebook to connect to the Machine Learning Model. 
 
 ### Phase 2. Exploratory Data Analysis
-Once the preliminary data cleaning was complete, initial investigations to discover any patterns and correlation among features (all variables except stroke) and target variable (stroke).  Insights are highlighted below:
+Once the preliminary data cleaning was complete, initial investigations to discover any patterns and correlations among features (all variables except stroke) and target variable (stroke).  Insights are highlighted below:
 - There is a significant difference between patients that suffered from a stroke (783 or 1.8%), compared to those that did not (42,617 or 98.2%). The dataset is extremely unbalanced, which will need to be amended prior inputting the data into a machine learning algorithm.
 - Age: The risk of experiencing a stroke increases as a patient's age advances.
-- Gender: 
+- Gender: Gender is not a variable that discriminates between a person having a stroke or not.
 - Marriage status: Married people have a higher chance of suffering a stroke compared to those who are not married.
-- Smoking status: Formerly smoked people have a higher chance of suffering a stroke followed by those who smoke, then people who never smoke.
+- Smoking status: Formerly smoked people have a higher chance of suffering a stroke followed by those who do smoke, then people who never smoke.
 - Hypertension: People who have hypertension have a higher chance of suffering a stroke.
-- Heart disease: People who have heart disease are more prone to suffering a stroke.
+- Heart disease: People who have heart disease have a higher chance of suffering a stroke.
 
-Although all dataset variables may have an impact on someone’s chances of suffering a stroke, based on the analysis, the significant stroke risk factors are age, hypertension, heart disease, smoking status, and average glucose level. The findings of this data exploration can be found [here](https://github.com/retroxsky06/Final_Project/blob/main/data_cleaning_and_analysis/exploratory_data_analysis.ipynb) and was adapted into a Tableau story.
+The findings of this data exploration can be found [here](https://github.com/retroxsky06/Final_Project/blob/main/data_cleaning_and_analysis/exploratory_data_analysis.ipynb) and was adapted into a Tableau story.
 
 ##### Fig. 2. Bivariate Analysis: Hypertension, Heart Disease, & Marriage status
 ![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/bivar_analysis.png)
@@ -64,16 +64,32 @@ The dataset was separated into two categories: 6 features (input) and 1 target (
 - Features: age, gender, hypertension, heart disease, smoking status
 - Target: stroke
 
-For the final Linear Regression Model, a 75/25 testing/training split was used to achieve the results. 
+For all models, a 75/25 testing/training split was used to achieve the results. 75% was used to train the model, while 25% was used to evaluate it.
 
-**Explanation of Model Choice:**  Several models were tried, and it was the Linear Regression (random_state=42) that outperformed the other models. The results for each model is displayed below:
+**Explanation of Model Choice:**  Several models were tried, and it was the Logistic Regression (random_state=42) that was chosen due to its outperformance against the other models. Additionally, the Logistic Regression was chosen as it's easier to implement, interpret, and train.
+
+The results for each model is displayed below:
 
 ![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/ml_trials.png)
 
-### Phase 4. Results of Analysis
+#### Results of Analysis
+The model ran successfully with a 76% accuracy; however, the percentage can be misleading due to a high class imbalance.  The precision, recall, and f1 scores are reviewed to better evaluate the model. Results of the model is displayed below in a confusion matrix, where 0 equals 'No Stroke,' and 1 equals 'Stroke.'
 
-## Summary
+![fig5](https://github.com/retroxsky06/Final_Project/blob/main/images/model_run.png)
 
-### Recommendations for Future Analysis
+- Out of 10,642 no stroke outcomes (Actual 0), 7,788 were predicted to be no stroke (Predicted 0), which are true positives. 
+- Out of 10,642 no stroke outcomes (Actual 0), 2,854 were predicted to have stroke (Predicted 1), which are considered false negatives.
+- Out of 208 stroke outcomes (Actual 1), 44 were predicted to be no stroke (Predicted 0) and are considered false positives.
+- Out of 208  stroke outcomes (Actual 1), 164 were predicted to be strokes (Predicted 1) and are considered true negatives.
+
+## Recommendations for Future Analysis
+- Run different train and test sets: A 75/25 train/test was only attempted in this analysis and in the future it would be helpful to try other size parameters, such as a 67% train and a 33% test, and a 50% train and 50% test set.
+- Add all the variables: Instead of only using seven variables (including target), all variables could be applied to see if the accuracy results, and precision, recall, and f1 scores improve. 
+- Revisit the tried models to fine tune them to get a better fitting model.
+- Explore different machine models
+
+### Improvements
+An area that could have improved my project is taking more time to do statistical analysis to attain a better understanding of the risk factors and its signifiance.. Additionally, as there are many factors that may impact one’s risk of suffering a stroke, I could have used all the variables for the machine learning algorithm.
+
 
 
