@@ -8,7 +8,7 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 
 ### Visualizations
 - **Tableau:** [Stroke Analytics](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/Story1?publish=yes)
-- **Presentation:** [Google Slides]()
+- **Presentation:** [Google Slides](https://docs.google.com/presentation/d/1LFhhYaabJc8rippfvuhxt_4OcxhvujPh_i00uDQa6iU/edit?usp=sharing)
 
 ### Software & Resources
 - Data Cleaning and Analysis: Python
