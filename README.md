@@ -16,13 +16,13 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 - Machine Learning: Scikit-learn
 - Visualizations: Tableau, Flask, HTML, CSS
 - Presentation: Google Slides
-- Data source: [train_strokes.csv](https://github.com/retroxsky06/Final_Project/blob/main/Resources/train_strokes.csv) from [Kaggle](kaggle.com/datasets)
+- Data source: [Kaggle](https://kaggle.com/datasets)
 
 ## Outline of Project
 - **Selected Topic:** Stroke
 - **Reason for Selected topic:** The topic was selected due to interest in examining six assumptions about risk factors that lead to a stroke, the second leading cause of death worldwide, and a major cause of severe disability.
 - **Source of data:** The dataset was sourced from Kaggle. This dataset contains 43,400 observations with 11 attributes. Each row in the data provides relevant patient information. The initial source of the data is unknown.
-  - train_strokes.csv: contains data specific to patients (age, gender, heart disease, hypertension, etc.)
+  - [train_strokes.csv](https://github.com/retroxsky06/Final_Project/blob/main/Resources/train_strokes.csv): contains data specific to patients (age, gender, heart disease, hypertension, etc.)
 - **Questions I hope to answer with the data:**
   - Are only older adults impacted by strokes?
   - Do males have a higher chance of suffering from a stroke than females?
@@ -35,14 +35,14 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 ## Project Phases
 ![fig1](2)
 ### Phase 1. Data Review and Cleaning
-The first part of our Analysis involved looking at the raw data to ensure it was usable for our analysis. The dataset was relatively clean; however, two columns, body mass index (BMI) and smoking status had missing values. 1,458 records had shown NaN (null values) in the column, and initially, I thought about removing the records as it represented a small portion of the dataset.  With further investigation, it contained 140 records of patients who suffered a stroke.  As the dataset had 738 patients who suffered from a stroke compared to 42,00 that did not, the information was valuable to retain.  The NaN values in the BMI column were instead replaced with the mean of BMI.  Additionally, 13,292 records of the dataset had missing values under the smoking status column, accounting for 30.6% of the data.  As the records are a significant portion of the dataset, a new category “unknown” was created to account for the missing values. Python’s pandas and numpy were used to clean the dataset. 
+The first part of the analysis involved looking at the raw data to ensure it was usable for the analysis. The dataset was relatively clean; however, two columns, body mass index (BMI) and smoking status had missing values. 1,458 records had shown NaN (null values) in the column, and initially, I thought about removing the records as it represented a small portion of the dataset.  With further investigation, it contained 140 records of patients who suffered a stroke.  As the dataset had 738 patients who suffered from a stroke compared to 42,00 that did not, the information was valuable to retain.  The NaN values in the BMI column were instead replaced with the mean of BMI.  Additionally, 13,292 records of the dataset had missing values under the smoking status column, accounting for 30.6% of the data.  As the records are a significant portion of the dataset, a new category “unknown” was created to account for the missing values. Python’s pandas and numpy were used to clean the dataset. 
 
 After conducting an initial exploratory data analysis, additional cleaning of the data occurred in which four columns- residence type, work type, average glucose level, and BMI were removed.  
  
 **Integration of Database:** Once the data was cleaned, it was connected and stored in a local PostgreSQL server using SQLAlchemy. The cleaned data was accessed using a Postgres query through Jupyter Notebook to connect to the Machine Learning Model. 
 
 ### Phase 2. Exploratory Data Analysis
-Once the preliminary data cleaning was complete, initial investigations to discover any patterns and correlations among features (all variables except stroke) and target variable (stroke).  Insights are highlighted below:
+Once the preliminary data cleaning was complete, initial investigations to discover any patterns and correlations among features. Observations are highlighted below:
 - There is a significant difference between patients that suffered from a stroke (783 or 1.8%), compared to those that did not (42,617 or 98.2%). The dataset is extremely unbalanced, which will need to be amended prior inputting the data into a machine learning algorithm.
 - Age: The risk of experiencing a stroke increases as a patient's age advances.
 - Gender: Gender is not a variable that discriminates between a person having a stroke or not.
@@ -88,12 +88,12 @@ The model ran successfully with a 76% accuracy; however, the percentage can be m
 
 ## Recommendations for Future Analysis
 - Run different train and test sets: A 75/25 train/test was only attempted in this analysis and in the future it would be helpful to try other size parameters, such as a 67% train and a 33% test, and a 50% train and 50% test set.
-- Add all the variables: Instead of only using seven variables (including target), all variables could be applied to see if the accuracy results, and precision, recall, and f1 scores improve. 
+- Add more variables: Instead of only using seven variables (including target), all variables could be applied to see if the accuracy results, and precision, recall, and f1 scores improve. 
 - Revisit the tried models to fine tune them to get a better fitting model.
-- Explore different machine models
+- Explore different machine models and datasets.
 
 ### Improvements
-An area that could have improved my project is taking more time to do statistical analysis to attain a better understanding of the risk factors and its signifiance.. Additionally, as there are many factors that may impact one’s risk of suffering a stroke, I could have used all the variables for the machine learning algorithm.
+An area that could have improved my project is taking more time to do statistical analysis to attain a better understanding of the risk factors and its significance. Additionally, as there are many factors that may impact one’s risk of suffering a stroke, I could have used all the variables for the machine learning algorithm.
 
 
 
