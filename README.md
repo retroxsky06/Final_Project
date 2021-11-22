@@ -7,7 +7,7 @@
 For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, and analyzed using Python’s Pandas and Numpy, and then stored in a PostgreSQL database.  The data is then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on their demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask, HTML, and CSS. Findings are displayed through Tableau and Google Slides.
 
 ### Visualizations & Presentation
-- [Tableau](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/Story1?publish=yes) 
+- [Tableau](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/StrokeRiskExploratoryDataAnalysis?publish=yes) 
 - [Google Slides Presentation](https://docs.google.com/presentation/d/1LFhhYaabJc8rippfvuhxt_4OcxhvujPh_i00uDQa6iU/edit?usp=sharing)
 
 ### Software & Resources
