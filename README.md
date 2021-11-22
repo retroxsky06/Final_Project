@@ -75,7 +75,7 @@ For all models, a 75/25 testing/training split was used to achieve the results. 
 
 The results for each model is displayed below:
 
-![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/ml_trials.png)
+![fig3](https://github.com/retroxsky06/Final_Project/blob/main/images/model_test_run.png)
 
 #### Results of Analysis
 The model ran successfully with a 76% accuracy; however, the percentage can be misleading due to a high class imbalance.  The precision, recall, and f1 scores are reviewed to better evaluate the model. Results of the model is displayed below in a confusion matrix, where 0 equals 'No Stroke,' and 1 equals 'Stroke.'
