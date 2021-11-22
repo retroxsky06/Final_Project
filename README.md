@@ -7,7 +7,7 @@
 For the final project of this course, the primary goal is to tell a cohesive story using a dataset. The topic of selection is stroke and the dataset is sourced from Kaggle. A csv file is downloaded, cleaned, and analyzed using Python’s Pandas and Numpy, and then stored in a PostgreSQL database.  The data is then trained, tested, and evaluated in a machine learning algorithm to predict if a patient is likely to suffer a stroke based on their demographics and health records. Lastly, the machine learning algorithm is integrated into an interactive web-application using Flask, HTML, and CSS. Findings are displayed through Tableau and Google Slides.
 
 ### Visualizations & Presentation
-- [Tableau](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/Story1?publish=yes) 
+- [Tableau](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/StrokeRiskExploratoryDataAnalysis?publish=yes) 
 - [Google Slides Presentation](https://docs.google.com/presentation/d/1LFhhYaabJc8rippfvuhxt_4OcxhvujPh_i00uDQa6iU/edit?usp=sharing)
 
 ### Software & Resources
@@ -30,10 +30,11 @@ For the final project of this course, the primary goal is to tell a cohesive sto
   - People who have heart disease are more prone to stroke?
   - Do married people have a higher chance of getting a stroke than unmarried people?
   - Are people who smoke are more prone to stroke?
+  - Can machine learning predict whether a patient is likely to suffer a stroke based on one's demographics (age, gender, marital status) and health records (presence of hypertension and/or heart disease, smoking status, and experience of stroke)?
 - **Algorithm:** Logistic Regression Model
 
 ## Project Phases
-![fig1](2)
+![fig1](https://github.com/retroxsky06/Final_Project/blob/main/images/data_flowchart.png)
 ### Phase 1. Data Review and Cleaning
 The first part of the analysis involved looking at the raw data to ensure it was usable for the analysis. The dataset was relatively clean; however, two columns, body mass index (BMI) and smoking status had missing values. 1,458 records had shown NaN (null values) in the column, and initially, I thought about removing the records as it represented a small portion of the dataset.  With further investigation, it contained 140 records of patients who suffered a stroke.  As the dataset had 738 patients who suffered from a stroke compared to 42,00 that did not, the information was valuable to retain.  The NaN values in the BMI column were instead replaced with the mean of BMI.  Additionally, 13,292 records of the dataset had missing values under the smoking status column, accounting for 30.6% of the data.  As the records are a significant portion of the dataset, a new category “unknown” was created to account for the missing values. Python’s pandas and numpy were used to clean the dataset. 
 
