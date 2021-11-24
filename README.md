@@ -9,7 +9,6 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 ### Visualizations & Presentation
 - [Tableau](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/StrokeRiskExploratoryDataAnalysis?publish=yes) 
 - [Google Slides Presentation](https://docs.google.com/presentation/d/1WRe8fT-RepbuLN0IkvtqbzeTYKDBZzdOCxoXhsSKN3E/edit?usp=sharing)
-- [Video Presentation]()
 
 ### Software & Resources
 - Data Cleaning and Analysis: Python
@@ -67,7 +66,7 @@ The findings of this data exploration can be found [here](https://github.com/ret
 **Feature Selection & Training & Testing sets:**
 
 The dataset was separated into two categories: 6 features (input) and 1 target (output):
-- Features: age, gender, hypertension, heart disease, smoking status
+- Features: age, gender, hypertension, heart_disease, ever_married, smoking_status
 - Target: stroke
 
 For all models, a 75/25 testing/training split was used to achieve the results. 75% was used to train the model, while 25% was used to evaluate it.
@@ -95,7 +94,7 @@ The model ran successfully with a 76% accuracy; however, the percentage can be m
 - Explore different machine models and datasets.
 
 ### Improvements
-An area that could have improved my project is taking more time to do statistical analysis to attain a better understanding of the risk factors and its significance. Additionally, as there are many factors that may impact one’s risk of suffering a stroke, I could have used all the variables for the machine learning algorithm.
+An area that could have improved my project is taking more time to do statistical analysis to attain a better understanding of the models, risk factors and their significance. Additionally, as there are many factors that may impact one’s risk of suffering a stroke, I could have used all the variables for the machine learning algorithm.
 
 
 
