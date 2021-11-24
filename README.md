@@ -9,6 +9,7 @@ For the final project of this course, the primary goal is to tell a cohesive sto
 ### Visualizations & Presentation
 - [Tableau](https://public.tableau.com/app/profile/vanessa.aczon/viz/StrokeVisualizations/StrokeRiskExploratoryDataAnalysis?publish=yes) 
 - [Google Slides Presentation](https://docs.google.com/presentation/d/1WRe8fT-RepbuLN0IkvtqbzeTYKDBZzdOCxoXhsSKN3E/edit?usp=sharing)
+- [Video Presentation]()
 
 ### Software & Resources
 - Data Cleaning and Analysis: Python
